@@ -19,6 +19,7 @@
 		0F78782C2BB67119009D4D93 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78782B2BB67119009D4D93 /* Enums.swift */; };
 		0F7878322BB671E7009D4D93 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878312BB671E7009D4D93 /* HomeView.swift */; };
 		0F7878342BB673B8009D4D93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878332BB673B8009D4D93 /* HeaderView.swift */; };
+		0F7878372BB68B6B009D4D93 /* TenorSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0F78782B2BB67119009D4D93 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		0F7878312BB671E7009D4D93 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0F7878332BB673B8009D4D93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TenorSans-Regular.ttf"; sourceTree = "<group>"; };
+		0F7878382BB68BDB009D4D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		0F6823BF2BB56A80001D7F00 /* fashion4you */ = {
 			isa = PBXGroup;
 			children = (
+				0F7878382BB68BDB009D4D93 /* Info.plist */,
+				0F7878352BB68B0D009D4D93 /* Fonts */,
 				0F7878262BB6704C009D4D93 /* Application */,
 				0F7878252BB6702E009D4D93 /* Support */,
 				0F7878242BB67021009D4D93 /* Models */,
@@ -196,6 +201,14 @@
 				0F7878332BB673B8009D4D93 /* HeaderView.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		0F7878352BB68B0D009D4D93 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7878372BB68B6B009D4D93 /* TenorSans-Regular.ttf in Resources */,
 				0F6823C82BB56A83001D7F00 /* Preview Assets.xcassets in Resources */,
 				0F6823C52BB56A83001D7F00 /* Assets.xcassets in Resources */,
 			);
@@ -500,6 +514,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fashion4you/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fashion4you/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -528,6 +543,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fashion4you/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fashion4you/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
