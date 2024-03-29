@@ -26,6 +26,6 @@ func tenorSans(_ size: CGFloat) -> Font {
 
 let hashtags = ["#2021", "#spring", "#collection", "#fall", "#dress", "#autumncollection", "#openfashion"]
 
-//var cartItems: [CartItem] = [.init(product: product1, count: 1), .init(product: product2, count: 2), .init(product: product3, count: 1)]
+var cartItems: [CartItem] = [.init(product: product1, count: 1), .init(product: product2, count: 2), .init(product: product3, count: 1)]
 
 var products: [Product] = [product1, product2, product3, product4, product5, product6]
