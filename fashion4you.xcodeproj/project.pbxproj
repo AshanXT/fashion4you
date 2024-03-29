@@ -20,6 +20,10 @@
 		0F7878322BB671E7009D4D93 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878312BB671E7009D4D93 /* HomeView.swift */; };
 		0F7878342BB673B8009D4D93 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878332BB673B8009D4D93 /* HeaderView.swift */; };
 		0F7878372BB68B6B009D4D93 /* TenorSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */; };
+		0F78783A2BB6B6D7009D4D93 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878392BB6B6D7009D4D93 /* Color+Extensions.swift */; };
+		0F78783D2BB6BB5A009D4D93 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78783C2BB6BB5A009D4D93 /* Product.swift */; };
+		0F78783F2BB6BF9D009D4D93 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78783E2BB6BF9D009D4D93 /* CategoryView.swift */; };
+		0F7878412BB6C18E009D4D93 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7878402BB6C18E009D4D93 /* ProductItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		0F7878332BB673B8009D4D93 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TenorSans-Regular.ttf"; sourceTree = "<group>"; };
 		0F7878382BB68BDB009D4D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0F7878392BB6B6D7009D4D93 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		0F78783C2BB6BB5A009D4D93 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0F78783E2BB6BF9D009D4D93 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		0F7878402BB6C18E009D4D93 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 		0F7878242BB67021009D4D93 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0F78783C2BB6BB5A009D4D93 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +181,7 @@
 		0F7878252BB6702E009D4D93 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0F78783B2BB6B6F9009D4D93 /* Extensions */,
 				0F7878272BB670CC009D4D93 /* typealiases.swift */,
 				0F7878292BB670F2009D4D93 /* Constants.swift */,
 				0F78782B2BB67119009D4D93 /* Enums.swift */,
@@ -199,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				0F7878332BB673B8009D4D93 /* HeaderView.swift */,
+				0F78783E2BB6BF9D009D4D93 /* CategoryView.swift */,
+				0F7878402BB6C18E009D4D93 /* ProductItemView.swift */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -209,6 +221,14 @@
 				0F7878362BB68B6B009D4D93 /* TenorSans-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		0F78783B2BB6B6F9009D4D93 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F7878392BB6B6D7009D4D93 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,9 +362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F7878412BB6C18E009D4D93 /* ProductItemView.swift in Sources */,
 				0F7878282BB670CC009D4D93 /* typealiases.swift in Sources */,
 				0F6823C32BB56A80001D7F00 /* ContentView.swift in Sources */,
+				0F78783D2BB6BB5A009D4D93 /* Product.swift in Sources */,
 				0F78782C2BB67119009D4D93 /* Enums.swift in Sources */,
+				0F78783F2BB6BF9D009D4D93 /* CategoryView.swift in Sources */,
+				0F78783A2BB6B6D7009D4D93 /* Color+Extensions.swift in Sources */,
 				0F7878322BB671E7009D4D93 /* HomeView.swift in Sources */,
 				0F6823C12BB56A80001D7F00 /* fashion4youApp.swift in Sources */,
 				0F78782A2BB670F2009D4D93 /* Constants.swift in Sources */,

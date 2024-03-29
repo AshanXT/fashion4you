@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    private var categories = [Categories.All.rawValue, Categories.Apparel.rawValue, Categories.Dress.rawValue, Categories.TShirt.rawValue, Categories.Bag.rawValue]
+    
+    @State private var selectedCategory: Int = 0
+    
     var body: some View {
         ZStack{
             Color.white.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -18,6 +23,7 @@ struct HomeView: View {
                         
                         HeroImageView()
                         NewArrivalView()
+                        Spacer()
                     }
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
@@ -71,7 +77,59 @@ struct HomeView: View {
     
     @ViewBuilder
     private func NewArrivalView() -> some View  {
+        Text("New Arrival")
+            .font(Font.custom("Tenor Sans", size: 28))
+            .multilineTextAlignment(.center)
+            .foregroundColor(.black)
+            .frame(width: 225, height: 32, alignment: .top)
+            .padding(.top, 10)
         
+        Image("Divider")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 140)
+            .padding(.top,10)
+        
+        VStack{
+            HStack(spacing: 20){
+                ForEach(0..<categories.count, id: \.self){ i in
+                    CategoryView(isSelected: i == selectedCategory, title: categories[i])
+                        .onTapGesture {
+                            selectedCategory = i
+                        }
+                    
+                    
+                }
+                
+            }
+            .frame(maxWidth: .infinity)
+            
+            HStack {
+                ProductItemView(product: product1)
+                ProductItemView(product: product2)
+            }
+            
+            HStack {
+                ProductItemView(product: product3)
+                ProductItemView(product: product4)
+            }
+            
+            Button {
+                
+            } label: {
+                HStack(alignment: .center, spacing: 8) {
+                    Text("Explore More")
+                        .font(tenorSans(20))
+                        .multilineTextAlignment(.center)
+                     
+                        
+                    Image(systemName: "arrow.forward")
+                        .frame(width: 18, height: 18)
+                }
+            }
+            .tint(Color.BodyGrey)
+            .padding(12)
+        }
         
         
     }
