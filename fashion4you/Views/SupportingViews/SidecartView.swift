@@ -50,7 +50,7 @@ struct SideCartViewContents: View {
             }
            
             NavigationLink {
-               // CheckoutView()
+               CheckoutView()
             } label: {
                 HStack {
                     Image("shopping bag")

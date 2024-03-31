@@ -17,72 +17,85 @@ struct HomeView: View {
     @State private var selectedCategory: Int = 0
     
     var body: some View {
-        ZStack{
-            Color.white.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            ZStack {
-                VStack(spacing: 0){
-                    
-                    ScrollView(.vertical){
+        
+        NavigationStack{
+            
+            ZStack{
+                Color.white.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                ZStack {
+                    VStack(spacing: 0){
                         
-                        HeroImageView()
-                        NewArrivalView()
-                        Image("Brand")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        CollectionsView()
-                        TrendingHashtagsView()
-                        FooterView()
-                        Spacer()
+                        ScrollView(.vertical){
+                            
+                            HeroImageView()
+                            NewArrivalView()
+                            Image("Brand")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            CollectionsView()
+                            TrendingHashtagsView()
+                            FooterView()
+                            Spacer()
+                        }
+                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        
                     }
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(.top, 56)
                     
                 }
-                .padding(.top, 56)
-                
-            }
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
-            .overlay(alignment: .top) {
-                
-                HeaderView {
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+                .overlay(alignment: .top) {
                     
-                    presentSideMenu.toggle()
-                    
-                } cartAction: {
-                    presentSideCart.toggle()
+                    HeaderView {
+                        
+                        presentSideMenu.toggle()
+                        
+                    } cartAction: {
+                        presentSideCart.toggle()
+                    }
                 }
+                SideMenu()
+                SideCart()
             }
-            SideMenu()
-            SideCart()
+            .navigationBarHidden(true)
         }
+     
     }
     
     @ViewBuilder
     private func HeroImageView() -> some View  {
-        ZStack{
-            Image("Hero")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity)
-                .frame(height: 620)
+        
+        NavigationLink{
+            ProductsList()
+        } label: {
             
-            Button{
-                print("Explore Collection Button Clicked")
-            } label: {
-                RoundedRectangle(cornerRadius: 30).overlay {
-                Text("Explore Collection")
-                        .font(Font.custom("TenorSans-Regular", size:20))
-                        .foregroundColor(.white)
-                        
+            ZStack{
+                Image("Hero")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 620)
                 
+                Button{
+                    print("Explore Collection Button Clicked")
+                } label: {
+                    RoundedRectangle(cornerRadius: 30).overlay {
+                    Text("Explore Collection")
+                            .font(Font.custom("TenorSans-Regular", size:20))
+                            .foregroundColor(.white)
+                            
+                    
+                    }
+                   
+                   
                 }
-               
-               
+                .frame(width: 253, height: 40)
+                .tint(.black.opacity(0.4))
+                .offset(.init(width: 0, height: 250))
+                
             }
-            .frame(width: 253, height: 40)
-            .tint(.black.opacity(0.4))
-            .offset(.init(width: 0, height: 250))
-            
         }
+     
         
         
     }
@@ -150,6 +163,15 @@ struct HomeView: View {
         Text("Collections")
             .font(tenorSans(28))
             .foregroundColor(Color.black)
+        
+        
+        NavigationLink {
+            
+            ProductsList()
+        } label: {
+            
+            
+        }
         
         
         Image("Collection 1")

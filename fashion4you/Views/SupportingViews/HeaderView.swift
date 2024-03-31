@@ -28,10 +28,20 @@ struct HeaderView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 20)
                 
-                Image("Logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 84, height: 84)
+                
+                NavigationLink {
+                    HomeView()
+                    
+                } label: {
+                    
+                    Image("Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 84, height: 84)
+                    
+                }
+                
+                
                 
                 Button{
                     cartAction()
